@@ -20,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ETPush.setETLoggerToRequiredState(true)
         var success = false
         do {
-            try ETPush.pushManager().configureSDKWithAppID(etAppId, andAccessToken: etAccessToken, withAnalytics: true, andLocationServices: true, andCloudPages: true, withPIAnalytics: true)
+            try ETPush.pushManager().configureSDKWithAppID(
+                etAppId,
+                andAccessToken: etAccessToken,
+                withAnalytics: true,
+                andLocationServices: true,
+                andCloudPages: true,
+                withPIAnalytics: true
+            )
             success = true
         } catch let error as NSError {
             print("\(error.description)")
