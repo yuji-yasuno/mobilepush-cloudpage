@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zzg-LK-Oue">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mc_taskforce_mobile_cloudpage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTh-Tk-RCA">
+                                <rect key="frame" x="97" y="319" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dzA-U9-KBG"/>
+                                    <constraint firstAttribute="width" constant="180" id="msw-Dt-kwd"/>
+                                </constraints>
+                                <state key="normal" title="Inbox"/>
+                                <connections>
+                                    <segue destination="xDr-BN-ucW" kind="show" id="fS9-pF-3sT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wTh-Tk-RCA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5R9-YI-oKo"/>
+                            <constraint firstItem="wTh-Tk-RCA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y0K-fm-Jub"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4wN-xm-bs9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433.5" y="632.5"/>
+        </scene>
+        <!--Inbox-->
+        <scene sceneID="zl0-LZ-Gvz">
+            <objects>
+                <tableViewController id="xDr-BN-ucW" customClass="InboxTableViewController" customModule="mc_taskforce_mobile_cloudpage" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="d43-J2-Vr5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="et_inbox_cell" textLabel="4FT-Yb-SGF" detailTextLabel="rA4-af-HMz" style="IBUITableViewCellStyleSubtitle" id="BLd-nn-Jeh">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BLd-nn-Jeh" id="fHz-Oi-ZOF">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4FT-Yb-SGF">
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rA4-af-HMz">
+                                            <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xDr-BN-ucW" id="I0a-YF-zkb"/>
+                            <outlet property="delegate" destination="xDr-BN-ucW" id="zTx-xx-Khg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Inbox" id="fX9-gl-pXN"/>
+                    <connections>
+                        <outlet property="inboxTable" destination="d43-J2-Vr5" id="sfu-J8-CcL"/>
+                        <segue destination="BL6-Gf-yn7" kind="show" id="3HM-3U-grO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcp-KA-8xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038.5" y="631.5"/>
+        </scene>
+        <!--CloudPage-->
+        <scene sceneID="ggt-rN-2qo">
+            <objects>
+                <viewController storyboardIdentifier="cloudpage" id="BL6-Gf-yn7" customClass="CloudPageViewController" customModule="mc_taskforce_mobile_cloudpage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K9w-0T-5BR"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZTI-ZW-93H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OkF-Qx-cVh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ej9-lI-0pM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ej9-lI-0pM" firstAttribute="centerX" secondItem="OkF-Qx-cVh" secondAttribute="centerX" id="8ev-wF-bob"/>
+                            <constraint firstItem="ZTI-ZW-93H" firstAttribute="top" secondItem="ej9-lI-0pM" secondAttribute="bottom" id="95z-JE-ya2"/>
+                            <constraint firstItem="ej9-lI-0pM" firstAttribute="width" secondItem="OkF-Qx-cVh" secondAttribute="width" id="DgA-vo-rtj"/>
+                            <constraint firstItem="ej9-lI-0pM" firstAttribute="height" secondItem="OkF-Qx-cVh" secondAttribute="height" id="qjP-m2-IM1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CloudPage" id="bw6-xf-XTa"/>
+                    <connections>
+                        <outlet property="webView" destination="ej9-lI-0pM" id="QOq-zk-bBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcS-gn-Qt2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2621.5" y="632.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ga7-oE-TeT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zzg-LK-Oue" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Isr-rF-XyY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OQU-sV-Cvi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZC1-gR-F81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="632"/>
+        </scene>
+    </scenes>
+</document>
